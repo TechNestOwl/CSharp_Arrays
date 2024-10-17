@@ -30,7 +30,9 @@ namespace Arrays
             {
                 zerosArray[i] = 0;
                 //Console.WriteLine(zerosArray[i]);
-                System.Diagnostics.Debug.WriteLine(zerosArray[i]); //outputing to debugging console
+
+                //I am outputting to the debugging console I hope this is okay...
+                System.Diagnostics.Debug.WriteLine(zerosArray[i]); 
 
             }
         }
@@ -51,6 +53,21 @@ namespace Arrays
 
         private void problem3Btn_Click(object sender, EventArgs e)
         {
+            double[] FahrTemps = new double[16];
+            double[] CelTemps = new double[16];
+
+            for (int i = 0; i < FahrTemps.Length; i++)
+            {
+                FahrTemps[i] = i * 20; // Fahrenheit: 0, 20, 40,..300
+                CelTemps[i] = (FahrTemps[i] - 32) * 5 / 9; // Converting Fhrenheit to Celsius
+            }
+            System.Diagnostics.Debug.WriteLine("Fahreheit\tCelsius");
+            for (int i = 0; i < FahrTemps.Length; i++)
+            {
+                System.Diagnostics.Debug.WriteLine($"{FahrTemps[i],5}\t{CelTemps[i]:F2}");
+            }
+
+
 
         }
     }
