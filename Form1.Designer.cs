@@ -35,7 +35,7 @@
             // 
             // problem1Btn
             // 
-            problem1Btn.Location = new Point(154, 40);
+            problem1Btn.Location = new Point(161, 40);
             problem1Btn.Name = "problem1Btn";
             problem1Btn.Size = new Size(94, 29);
             problem1Btn.TabIndex = 0;
