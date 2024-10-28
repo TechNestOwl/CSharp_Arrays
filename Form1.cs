@@ -2,7 +2,7 @@
 
    Gill Guimaraes
 
-   Lab #8
+   Lab #9
 
    I wrote this code myself...
    I did not use AI or copy code from Google or another student
@@ -24,17 +24,23 @@ namespace Arrays
         {
             //initializng my empty array of 100 integers
             int[] zerosArray = new int[100];
-
-            //looping through and setting each i to 0
-            for (int i = 0;i < zerosArray.Length; i++)
+            try
             {
-                zerosArray[i] = 0;
-                //Console.WriteLine(zerosArray[i]);
+                //looping through and intentionally Indexing out of bounds
+                for (int i = 0; i < zerosArray.Length + 1; i++)
+                {
+                    zerosArray[i] = 0;
+                    //Console.WriteLine(zerosArray[i]);
 
-                //I am outputting to the debugging console I hope this is okay...
-                System.Diagnostics.Debug.WriteLine(zerosArray[i]); 
+                    System.Diagnostics.Debug.WriteLine(zerosArray[i]);
 
+                }
             }
+            catch(Exception ex) //handling the error by displaying message box.
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void problem2Btn_Click(object sender, EventArgs e)
